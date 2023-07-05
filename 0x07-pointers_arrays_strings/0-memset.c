@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset -file memeory with constant byte.
+ * *_memset -file memeory with constant byte.
  * @s: p to put constant
  * @b: constant
  * @n: max bytes to use
