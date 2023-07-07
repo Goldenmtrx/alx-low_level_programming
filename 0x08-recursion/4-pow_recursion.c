@@ -1,10 +1,11 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
  * _pow_recursion - search a string for any of a set of bytes.
  * @x: base
  * @y: exposant
- * Return: pointer to the byte in 's ' that matches one of the bytes in 'accept'
+ * Return: pointer to the byte in 's' that matches one of the bytes in 'accept'
  * or null if no such byte is found
 */
 
@@ -12,23 +13,14 @@ int _pow_recursion(int x, int y)
 {
 	if (y < 0)
 	{
-		return -1;
+		return (-1);
 	}
 	else if (y == 0)
 	{
-		return 1;
+		return (1);
 	}
 	else
 	{
-		return x * _pow_recursion(x, y - 1);
+		return (x * _pow_recursion(x, y - 1));
 	}
 }
-
-int main() {
-    int base = 2;
-    int exponent = 3;
-    int result = _pow_recursion(base, exponent);
-    printf("%d^%d = %d\n", base, exponent, result);
-    return 0;
-}
-
