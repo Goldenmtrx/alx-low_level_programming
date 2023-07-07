@@ -10,17 +10,25 @@
 
 int _pow_recursion(int x, int y)
 {
-
 	if (y < 0)
 	{
-		return (-1);
+		return -1;
 	}
-	if else(y == 0)
+	else if (y == 0)
 	{
-		return (1);
+		return 1;
 	}
 	else
 	{
-		return (x * _pow_recursion(x, y - 1));
+		return x * _pow_recursion(x, y - 1);
 	}
 }
+
+int main() {
+    int base = 2;
+    int exponent = 3;
+    int result = _pow_recursion(base, exponent);
+    printf("%d^%d = %d\n", base, exponent, result);
+    return 0;
+}
+
